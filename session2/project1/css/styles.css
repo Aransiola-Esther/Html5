@@ -1,45 +1,42 @@
 *{
-   box-sizing: border-box;
+   box-sizing: border-box ;
 
 
 }
 
 body{
-     margin: 960px;
-     background-color: aliceblue;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     text-align: justify;
-
+    width: 960px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
 }
- body header{
-             width: 100%;
-             height: 100px;
-             background-color: #113657;
-             padding: 25px;
-
-
+body header{
+    width: 100%;
+    height: 100px;
+    background-color: #113657;
+    padding: 25px;
 }
 body header a{
-          color: aliceblue;
-          text-decoration: none;
-          border: 1px solid aliceblue;
-          width: fit-content;
-          height: 40px;
-          padding-top: 10px;
-          text-transform: uppercase;
-          display: inline-block;
-          border-radius: 10px;
-
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid aliceblue;
+    width: fit-content;
+    height: 40px;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
 }
 
 body nav{
     background-color: #779dbb;
     width: 100%;
-    height: 50px; 
-   
+    height: 50px;
 }
+
 body section#banner{
-    background-image: url("../images/img1.jpeg");
+    background-image: url("../Images/photo-img1.jpeg");
     width: 100%;
     height: 350px;
     background-position: center;
@@ -47,38 +44,28 @@ body section#banner{
 }
 
 body nav ul{
-      display: flex;
-      margin: 0;
-      list-style-type: none;
-      padding: 10px; 
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    padding: 10px;
 }
 
 body nav ul li a{
-        text-decoration: none;
-        display: inline-block;
-        width: fit-content;
-        padding: 5px;
-        color: #142735
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    padding: 5px;
+    color: #142735;
+}
 
+body nav ul li a:hover{
+    border-bottom: 2px solid rgb(63, 18, 18);
 }
-body nav li a:hover{
-    border-bottom: 2px solid rgb(63, 13, 18);
-  
-}
+
 body footer{
     text-align: center;
     padding: 5px;
     width: 100%;
     height: 50px;
     background-color: #779dbb;
-}
-
-
-
-body section#banner{
-         width: 100%;
-         height: 350px;
-         background-image: url(../images/img1.jpg);
-
-
 }
