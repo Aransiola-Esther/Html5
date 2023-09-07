@@ -18,20 +18,21 @@
         <section>
             <h2>Fill the form below</h2>
             <p>One of our representative will get back to you as soon as possible</p>
+            <p>All fields with astericks are required</p>
             <form action="form processor.html" method="get"> <!-- get is a type for method and action links this form to created script-->
-                <label for="name">Name</label>
-                <input type="text" id="name"> <!-- creates a single line box -->
+                <label for="name">Name<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required autofocus placeholder="Examples:James Stuart"pattern="[a-zA-Z0-9]+\s[a-zA-Z]+"> <!-- creates a single line box -->
 
                 <label for="email">Email Address</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email" required placeholder="example@domain.com"pattern="[a-zA-Z0-9_.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}">
 
                 <label for="tel">Mobile Number</label>
-                <input type="tel" id="tel">
+                <input type="tel" id="tel" name="tel" placeholder="ooooooo">
 
                 <label for="message">Message</label>
                 <textarea id="message" cols="30" rows="5"></textarea> <!-- creates multiline box -->
 
-                <input type="submit" value="Send Message"> <!--call to action (value handles inscription on the box)-->
+                <input type="submit" value="Send Message" required placeholder="type your message here"> <!--call to action (value handles inscription on the box)-->
             </form>
         </section>
     </section>

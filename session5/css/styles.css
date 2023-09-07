@@ -56,3 +56,16 @@ body{
     height: 35px; /* size of the input box */
     color: #46467a; /* controls color in the input message and value in input "submit" */
 } 
+.container section form textarea{
+    resize: none;
+    color: #062743;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.container section form input[type="submit"]{
+    background-color: #b40e0e;
+    color: #eee;
+    cursor:pointer;
+    text-transform: uppercase;
+
+}
