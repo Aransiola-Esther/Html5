@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loops in Javascript</title>
 </head>
+
 <body>
     <h1>Loops in Javascript</h1>
 
     <script>
-        let counter = 1;
-        let sum = 0;
-        let product = 1;
-        let even = 0;
-        let odd = 0;
-        
+            let counter = 1;
+            let sum = 0;
+            let product = 1;
+            let even = 0;
+            let odd = 0;
 
-        while(counter <= 10) {
-            sum = sum + counter;
-            product = product * counter; 
-            if (counter % 2 == 0){
-                even++;
+
+            while(counter <= 10) {
+                sum = sum + counter;
+                product = product * counter; 
+                if (counter % 2 == 0){
+                    even++;
+                } else {
+                    odd++;
+                } 
+                counter++;
+            }
+            document.write(`The sum of numbers from 1 - 10 is ${sum} multiplication of numbers from 1 - 10 is ${product} The even numbers are ${even} The odd numbers are ${odd}`);
+
+             let inputNum = parseInt(prompt("Please enter any number: "));
+            let product1 = 0;
+            for (let i = 1; i <= 12; i++) {
+              product = inputNum * i;
+              document.write(`${inputNum} * ${i} = ${product} <br>`);
+         }
+  
+        let y = 0;
+        let x = 0;
+        for (bila = 1; bila <= 100; bila++) {
+            if ((bila % 3 == 0) && (bila % 4 == 0)) {
+                document.write(`${bila} xy <br>`);
+                x++; y++;
+            } else if ((bila % 3 == 0)) {
+                document.write(`${bila} y <br>`);
+                y++;
+            } else if ((bila % 4 == 0)) {
+                document.write(`${bila} x <br>`);
+                x++;
+
             } else {
-                odd++;
-            } 
-            counter++;
+                document.write(`${bila} <br>`);
+            }
         }
-        document.write(`The sum of numbers from 1 - 10 is ${sum} multiplication of numbers from 1 - 10 is ${product} The even numbers are ${even} The odd numbers are ${odd}`);
-       
-         let inputNum = parseInt(prompt("Please enter any number: "));
-        let product1 = 0;
-        for (let i = 1; i <= 12; i++) {
-          product = inputNum * i;
-          document.write(`${inputNum} * ${i} = ${product} <br>`);
-     }
-      let cat = 3;
-      let fish = 
+        document.write(`The total number of x is ${x} <br> The total number of y is ${y}`)
     </script>
 
 </body>
+
 </html>
