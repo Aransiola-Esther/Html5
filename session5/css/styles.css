@@ -58,7 +58,7 @@ body{
 } 
 .container section form textarea{
     resize: none;
-    color: #062743;
+    color: #062743; 
     margin-bottom: 15px;
     padding: 10px;
 }
@@ -68,4 +68,4 @@ body{
     cursor:pointer;
     text-transform: uppercase;
 
-}
+} 

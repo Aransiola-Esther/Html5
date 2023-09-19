@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+</head>
+<body>
+    <script>
+        const CIRCLE = 1;
+        const RECTANGLE = 2;
+        const TRIANGLE = 3;
+        const QUIT = 0;
+        const PI = 22/7;
+
+
+        let response = prompt("Thank you for using our application.\n\nTo calculate  the area of circle, rectangle and triangle:\nEnter 1 -Circle\nEnter 2 - Rectangle\nEnter 3 - Triangle\nEnter 0 to Quit")
+
+        if ( response == CIRCLE) {
+            let radius = prompt("please enter the value for the radius: ");
+            let area = PI * radius *radius;
+            alert("Area is: " + area);             
+        } else if(response == RECTANGLE){
+            let length = prompt("please enter the value for length: ");
+            let breadth = prompt("please enter the value for breadth: ");
+            let area = length * breadth;
+            alert("Area is: " + area);
+        } else if(response == TRIANGLE){
+            let base = prompt("enter the value for base: ");
+            let height = prompt("enter the for height: ");
+            let area = 0.5 * base * height;
+            alert("Area is: " + area);             
+        }else if(response == QUIT){
+            alert("program ended!");
+        }else{
+            alert("Invalid input!");
+        }
+
+        alert()
+
+
+    </script>
+    
+</body>
+</html>

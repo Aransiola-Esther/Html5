@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Javascript</title>
+</head>
+<body>
+    <h1>Loops in Javascript</h1>
+
+    <script>
+        let counter = 1;
+        let sum = 0;
+        let product = 1;
+        let even = 0;
+        let odd = 0;
+        
+
+        while(counter <= 10) {
+            sum = sum + counter;
+            product = product * counter; 
+            if (counter % 2 == 0){
+                even++;
+            } else {
+                odd++;
+            } 
+            counter++;
+        }
+        document.write(`The sum of numbers from 1 - 10 is ${sum} multiplication of numbers from 1 - 10 is ${product} The even numbers are ${even} The odd numbers are ${odd}`);
+       
+         let inputNum = parseInt(prompt("Please enter any number: "));
+        let product1 = 0;
+        for (let i = 1; i <= 12; i++) {
+          product = inputNum * i;
+          document.write(`${inputNum} * ${i} = ${product} <br>`);
+     }
+      let cat = 3;
+      let fish = 
+    </script>
+
+</body>
+</html>

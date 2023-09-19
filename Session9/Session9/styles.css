@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+.container{
+    width: 960px;
+    
+}
+form{
+    background-color: #4482df;
+    padding: 15px;
+
+}
+input, textarea{
+    margin-bottom: 10px;
+    padding: 15px;
+    border: none !important;
+    outline: none !important;
+}
+textarea{
+    height: 250px;
+    resize:none;
+    overflow:scroll;
+
+}
+input[type="submit"]{
+    cursor:pointer;
+}
+#txtExtractedEmails{
+    display: none;
+}

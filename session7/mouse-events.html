@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Hotel Reservation Form</h1>
+            </div>
+            <form action="" id="formReservation">
+                <div class="col-md-6 mb-2">
+                    <div class="row">
+                        <div class="col-md-12 mb-2">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <input type="date" class="form-control">
+                        </div>
+    
+                        <div class="col-md-6 mb-2">
+                            <input type="date" class="form-control">
+                        </div>
+    
+                        <div class="col-md-12 mb-2">
+                            <input type="number" class="form-control">
+                        </div>
+    
+                        <div class="col-md-12 mb-2">
+                            <img src="images/btn 1.png" alt="submit" id="img-submit" onmouseover="showImage(this, 'images/btn 2.png')" onmousedown="showImage(this, 'images/btn 3.png')" onmouseup="showImage(this, 'images/btn 1.png')" onclick="formReservation.submit()">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        let imgSubmit = document.getElementById("img-submit");
+        let frmReservation = document.getElementById("frmReservation");
+
+        imgSubmit.addEventListener("mousedown", showImage);
+        imgSubmit.addEventListener("mouseup", showImage);
+
+        function showImage(event) { 
+            if(event.type =="mousedown") {
+                event.target.src = "images/btn 2.png";
+            } else {
+                event.target.src = "images/btn 3.png";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
