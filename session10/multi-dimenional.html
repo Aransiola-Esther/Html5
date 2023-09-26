@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accession Array Elements With Loops</title>
+</head>
+
+<body>
+    <script>
+        let products = [["Monitor", "25,300"], ["Keyboard", "5,000"], ["iphone 15", "900,000"]];
+        document.write(`<table border="1">`)
+        document.write(`<tr><th>Name</th><th>Price</th></tr>`);
+
+        for (let i = 0; i < products.length; i++) {
+            document.write("<tr>");
+            for (let k = 0; k < products[i].length; k++) {
+                document.write(`<td>${products[i][k]}</td>`);
+            }
+
+            document.write("</tr>");
+        }
+
+
+        document.write("</table>")
+    </script>
+</body>
+
+</html>

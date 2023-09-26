@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <link
+        href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body onload="loadQuestions()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 questionContainer">
+                <h1 class="text-center mb-5">A Simple Quiz App</h1>
+                <button class="btn btn-success float-end" id="addQuestionBtn">Add Question</button>
+                <p id="questionText" class="mb-4"> Questions would be displayed here....</p>
+                <ul id="answerOptions" class="list-group mb-4">
+                    <li>Options would be displayed here</li>
+                    <li>Options would be displayed here</li>
+                    <li>Options would be displayed here</li>
+                    <li>Options would be displayed here</li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <button id="nextButton" class=" btn btn-danger">Next</button>
+            </div>
+
+
+            <div class="col-md-12">
+                <p id="resultContainer">Resultwould be displayed here</p>
+                <p id="missedQuestion">Displayed missed question </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let questionText = document.getElementById("questionText");
+        let answerOptions = document.getElementById("answerOptions");
+        let nextButton = document.getElementById("nextButton");
+        let resultContainer = document.getElementById("resultContainer");
+        let missedQuestion = document.getElementById("missedQuestion");
+        let addQuestionBtn = document.getElementById("addQuestionBtn");
+        addQuestionBtn.addEventListener("click", function () {
+            location.href = "add-Question.html";
+        })
+
+
+
+        const quizData = [
+            {
+                question: "What is the capital of France",
+                Options: ["London", "Berlin", "Paris", "Madrid"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                Options: ["Earth", "Mars", "Jupiter", "Pluto"],
+                correctAnswer: "Mars"
+            },
+            {
+                question: "What is ((2+2) - 8*2) ?",
+                Options: ["3", "8", "13", "-12"],
+                correctAnswer: "-12"
+            }
+        ];
+
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let missedquestion = 0
+
+        function loadQuestions() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            questionText.innerHTML = currentQuestion.question;
+
+            answerOptions.innerHTML = "";
+
+            currentQuestion.Options.forEach(Option => {
+                const li = document.createElement("li");
+                li.innerHTML = Option;
+                li.addEventListener("click", checkAnswer);
+
+                answerOptions.appendChild(li);
+            })
+
+
+        }
+        nextButton.addEventListener("click", next)
+        function next() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestions();
+            } else {
+                showResult();
+            }
+
+        }
+
+        function checkAnswer(event) {
+            const selectedOption = event.target.textContent;
+            const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
+
+            if (selectedOption === correctAnswer) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+            if (selectedOption != correctAnswer) {
+                missedquestion++;
+            }
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestions();
+            } else {
+                showResult();
+            }
+
+        }
+
+
+        function showResult() {
+            questionText.innerHTML = "";
+            answerOptions.innerHTML = "";
+            nextButton.style.display = "none";
+            resultContainer.innerHTML = `You Score ${score} out of ${quizData.length}`;
+            missedQuestion.innerHTML = `You missed question  ${missedquestion} out of ${quizData.length}`;
+        }
+
+    </script>
+</body>
+
+</html>

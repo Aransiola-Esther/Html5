@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in Jvascript</title>
+</head>
+<body>
+    <h1>Arrays in Javascript</h1>
+    <script>
+        let maritalStatus = ["Single", "Married", "Divorced", "Complicated"];
+        for (let i = 0; i < maritalStatus.length; i++) {
+            const element = maritalStatus[i];
+            document.write(element +"<br>");
+        }
+
+        let scores = [];
+        let sum = 0;
+
+        for (let i = 0; i < 8; i++) {
+            let studentScore = parseInt(prompt(`Enter score for student ${i+1}:`))
+            scores[i] = studentScore;
+            sum = sum + studentScore;
+        }
+        let average = sum / scores.length;
+
+        document.write(`The average score of "${scores.join(", ")} is: ${average}" `);
+
+    </script>
+    
+</body>
+</html>

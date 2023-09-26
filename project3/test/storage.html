@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Working with Web Storage</h1>
+    <input type="text" placeholder="Enter your name" id="txtName" autofocus>
+    <input type="button" value="save" id="saveBtn">
+    <input type="button" value="Retrieve" id="retrieveBtn">
+    <p id="display"></p>
+
+    <script>
+        const txtName = document.getElementById("txtName");
+        const saveBtn = document.getElementById("saveBtn");
+        const retrieveBtn = document.getElementById("retrieveBtn");
+        const display = document.getElementById("display");
+
+        saveBtn.addEventListener("click", saveName);
+        retrieveBtn.addEventListener("click", retrieveName);
+
+        function saveName() {
+            let name = txtName.value;
+            if (name != "") {
+                localStorage.setItem("name", name);
+                display.innerHTML = `${name} saved succesfully!`;
+            } else {
+                display.innerHTML = "Please enter a name."
+            }
+
+        }
+        function retrieveName() {
+            if (localStorage.getItem("name") != null) {
+                let name = localStorage.getItem("name");
+                display.innerHTML = `${name} retrieved from session storage!`
+            } else {
+                display.innerHTML = "Oops! No entry found."
+            }
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

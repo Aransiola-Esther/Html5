@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkSupport() {
+            if (('sessionStorage' in window) && window[`sessionStorage`] !== null) {
+                alert("Your browser supports web Storage");
+                return;
+            }
+            alert("Your browser does not support web Storage");
+        }
+
+    </script>
+</head>
+
+<body onload="checkSupport();">
+
+</body>
+
+</html>
