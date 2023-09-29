@@ -1,0 +1,22 @@
+* {
+    font-family: poppins;
+}
+
+.container {
+    width: 700px;
+    margin-top: 10%
+}
+
+ul li {
+    margin: 0;
+    padding: 7px 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dc3545;
+    list-style: none;
+}
+
+ul li:hover {
+    background-color: #dc3545;
+    color: #eee;
+    cursor: pointer;
+}

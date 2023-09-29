@@ -3,6 +3,10 @@ let answerOptions = document.getElementById("answerOptions");
 let nextButton = document.getElementById("nextButton");
 let resultContainer = document.getElementById("resultContainer");
 let addQuestionBtn = document.getElementById("addQuestionBtn");
+let time = document.getElementById("time")
+let timeStandard;
+let timeDecreased;
+
 
 let txtQuestion = document.querySelector("#txtQuestion");
 let txtOptions = document.querySelectorAll(".form-control.options");
@@ -85,6 +89,10 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 function loadQuestions() {
+    clearInterval(timeDecreased);
+    timeStandard = 5;
+    time.innerHTML = `Time: ${timeStandard} second(s)`;
+    timeDecreased = setInterval(decreament, 1000);
     const currentQuestion = quizData[currentQuestionIndex];
     questionText.innerHTML = currentQuestion.question;
 
@@ -97,6 +105,21 @@ function loadQuestions() {
 
         answerOptions.appendChild(li);
     });
+}
+function decreament() {
+    timeStandard--;
+    time.innerHTML = `Time: ${timeStandard} seconds(s)`;
+    currentQuestionIndex;
+
+    if (timeStandard <= 0) {
+        if (currentQuestionIndex < quizData.length) {
+            mixedQuestions.push(quizData[currentQuestionIndex]);
+            currentQuestionIndex++;
+            loadQuestions();
+        } else {
+            showResult();
+        }
+    }
 }
 
 function checkAnswer(event) {
@@ -122,6 +145,7 @@ function showResult() {
     questionText.innerHTML = "";
     answerOptions.innerHTML = "";
     nextButton.style.display = "none";
+    time.style.display = "none";
     resultContainer.innerHTML = `Your Score: ${score} out of ${quizData.length} <br>`;
 
     if (mixedQuestions.length > 0) {

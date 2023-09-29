@@ -1,0 +1,88 @@
+li {
+    background-color: rgba(40, 7, 71, 0.726);
+    text-align: start;
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.list {
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box {
+    border: 2px solid rgba(140, 38, 236, 0.993);
+    text-align: center;
+    margin: 18% auto;
+    width: 60%;
+}
+
+body {
+    background-image: url(/images/body3.jpg);
+    color: white;
+    background-size: cover;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+span {
+    /* border: solid red; */
+    width: 45%;
+    margin-right: 45%;
+}
+
+.add {
+    background-color: rgba(140, 38, 236, 0.993);
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    background-color: rgba(140, 38, 236, 0.993);
+    color: white;
+    border: none;
+}
+
+.task {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.textarea input {
+    width: 86%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li input[type="checkbox"] {
+    margin-right: 5%;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.check {
+    text-align: start;
+    width: 100%;
+}
+
+#check input {
+    width: 5px;
+    height: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}

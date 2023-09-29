@@ -16,25 +16,36 @@
 
 <body>
     <div class="container">
-
         <div class="row">
             <div class="col-md-12 questionContainer">
-                <div class="text-center mb-5 ">
-                    <span id="time" class="btn  btn-danger">Your Time</span>
+                <h1 class="text-center">A Simple Quiz App</h1>
+                <h2 class="text-center mb-5">Add Question</h2>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" placeholder="Enter question here" id="txtQuestion"
+                            autofocus>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control options" placeholder="Enter option">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control options" placeholder="Enter option">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control options" placeholder="Enter option">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control options" placeholder="Enter option">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" placeholder="Enter correct option (answer)"
+                            id="txtAnswer">
+                    </div>
                 </div>
-                <h1 class="text-center mb-5">A Simple Quiz App</h1>
-                <button class="btn btn-success float-end" id="addQuestionBtn">Add Question</button>
-                <p id="questionText" class="mb-4">Question would be displayed here....</p>
-                <ul id="answerOptions" class="list-group mb-4">
-                    <li>Options would be displayed here using Javascript</li>
-                    <li>Options would be displayed here using Javascript</li>
-                    <li>Options would be displayed here using Javascript</li>
-                    <li>Options would be displayed here using Javascript</li>
-                </ul>
             </div>
 
             <div class="col-md-12 mb-3">
-                <button id="nextButton" class="btn btn-danger">Next</button>
+                <button id="saveBtn" class="btn btn-danger">Save Question</button>
             </div>
 
             <div class="col-md-12">
